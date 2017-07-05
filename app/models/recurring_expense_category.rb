@@ -1,0 +1,2 @@
+class RecurringExpenseCategory < ApplicationRecord
+end

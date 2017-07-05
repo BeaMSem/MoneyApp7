@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MoneyApp7</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+
+      <style>
+          body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+          }
+          body div{
+            box-sizing: border-box;
+          }
+
+          .app_menu{
+            width: 100%;
+            background: rgba(11, 16, 33, 0.95);
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+          }
+          .app_logo a{
+            color: white;
+            font-size: 1em;
+            text-decoration: none;
+          }
+          .project_menu{
+            display: flex;
+            flex-flow: row;
+            /*justify-content: flex-end;*/
+            align-items: center;
+          }
+          .link{
+            margin: 0 5px;
+          }
+          .link a{
+            color: white;
+            text-decoration: none;
+            font-size:0.8em;
+          }
+      </style>
+
+
+  </head>
+
+  <body>
+
+  <div class="app_menu">
+    <div class="app_logo"><%= link_to('MONEY APP', '/') %></div>
+    <div class="project_menu">
+      <div class="link"><%= link_to('project', '/') %></div>
+      <div class="link"><%= link_to('description', 'description') %></div>
+      <div class="link"><%= link_to('tutorials', 'tutorials') %></div>
+    </div>
+  </div>
+
+    <%= yield %>
+  </body>
+</html>

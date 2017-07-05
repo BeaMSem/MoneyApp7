@@ -1,0 +1,262 @@
+<style>
+  legend{
+    font-style: italic;
+  }
+  fieldset{
+    padding: 20px;
+    flex: 1;
+  }
+  .row{
+    display: flex;
+    flex-flow: row;
+  }
+
+  .settings_section{
+    border: 2px solid blueviolet;
+  }
+  .settings_category_list{
+    border: 2px solid blueviolet;
+  }
+  .setting_category_single{
+    border: 2px solid deeppink;
+  }
+  .setting_category_single_right_container{
+    border: 2px solid deepskyblue;
+  }
+  .setting_category_single_left_container{
+    border: 2px solid deepskyblue;
+  }
+  .category_title{
+    border: 2px solid orangered;
+  }
+  .single_settings_list{
+    border: 2px solid orangered;
+    background-color: orangered;
+  }
+  .setting_single{
+    border: 2px solid greenyellow;
+    background-color: greenyellow;
+  }
+  .add_setting_form{
+    border: 2px solid orangered;
+    padding: 5px;
+    margin: 5px;
+    background-color: orangered;
+  }
+  .add_setting_form .form{
+    border: 2px solid greenyellow;
+    padding: 5px;
+    margin: 5px;
+    background-color: greenyellow;
+  }
+
+
+
+    /*EXPENSES STYLES*/
+
+    .records_section{
+      border: 2px solid orangered;
+    }
+    .records_section_navigation{
+      border: 2px solid blueviolet;
+      display: flex;
+      flex-flow: row;
+    }
+  .records_section_navigation_left_container{
+    border: 2px solid deepskyblue;
+  }
+  .records_section_navigation_right_container{
+    border: 2px solid deepskyblue;
+  }
+    .records_section_forms{
+      border: 2px solid blueviolet;
+    }
+    .records_section_records{
+      border: 2px solid blueviolet;
+    }
+    .expenses_form{
+      border: 2px solid deeppink;
+      background-color: greenyellow;
+    }
+    .occasional_income_form{
+      border: 2px solid deeppink;
+      background-color: greenyellow;
+    }
+    .transfer_form{
+      border: 2px solid deeppink;
+      background-color: greenyellow;
+    }
+    .expenses{
+      border: 2px solid deeppink;
+      background-color: greenyellow;
+    }
+    .transfer{
+      border: 2px solid deeppink;
+      background-color: greenyellow;
+    }
+    .occasional_income{
+      border: 2px solid deeppink;
+      background-color: greenyellow;
+    }
+    .search_input{
+      border: 2px solid deeppink;
+      background-color: greenyellow;
+    }
+    .button{
+      border: 2px solid deeppink;
+      background-color: greenyellow;
+    }
+
+
+
+
+
+
+
+</style>
+
+<div class="to_do">
+  <h2>To DO</h2>
+  <p> shop crud</p>
+  <p> shop counter - the most often visited</p>
+</div>
+
+    <div class="to_do">
+      <h2>Find Answers</h2>
+      <p> what is the diffaerence bertween value and default value in react</p>
+      <p> shop counter - the most often visited</p>
+    </div>
+
+
+
+
+<h2>Expenses Component</h2>
+
+<fieldset class="records_section">
+
+  <legend>expenses_section</legend>
+  <fieldset class="records_section_navigation">
+    <legend>records_section_navigation</legend>
+      <div class="row">
+        <fieldset class="records_section_navigation_left_container">
+          <legend>records_section_navigation_left_container</legend>
+          <fieldset class="search_input">
+            <legend>search_input</legend>
+          </fieldset>
+        </fieldset>
+        <fieldset class="records_section_navigation_right_container">
+          <legend>records_section_navigation_right_container</legend>
+          <div class="row">
+            <fieldset class="button">
+              <legend>button</legend>
+            </fieldset>
+            <fieldset class="button">
+              <legend>button</legend>
+            </fieldset>
+            <fieldset class="button">
+              <legend>button</legend>
+            </fieldset>
+          </div>
+        </fieldset>
+      </div>
+  </fieldset>
+
+
+  <fieldset class="records_section_forms">
+    <legend>records_section_forms</legend>
+
+    <fieldset class="expenses_form">
+      <legend>expenses_form</legend>
+    </fieldset>
+    <fieldset class="transfer_form">
+      <legend>transfer_form</legend>
+    </fieldset>
+    <fieldset class="occasional_income_form">
+      <legend>occasional_income_form</legend>
+    </fieldset>
+
+  </fieldset>
+
+  <fieldset class="records_section_records">
+    <legend>records_section_records</legend>
+
+    <fieldset class="transfer_record">
+      <legend>transfer_record</legend>
+    </fieldset>
+    <fieldset class="expense_record">
+      <legend>expense_record</legend>
+    </fieldset>
+    <fieldset class="occasional_income_record">
+      <legend>occasional_income_record</legend>
+    </fieldset>
+    <fieldset class="transfer_record">
+      <legend>transfer_record</legend>
+    </fieldset>
+    <fieldset class="expense_record">
+      <legend>expense_record</legend>
+    </fieldset>
+    <fieldset class="occasional_income_record">
+      <legend>occasional_income_record</legend>
+    </fieldset>
+
+
+  </fieldset>
+
+</fieldset>
+
+
+
+<h2>Settings Component</h2>
+
+<fieldset>
+  <legend></legend>
+</fieldset>
+
+<fieldset class="settings_section">
+  <legend>settings_section</legend>
+
+      <fieldset class="settings_category_list">
+        <legend>settings_category_list</legend>
+
+            <fieldset class="setting_category_single">
+              <legend>setting_category_single</legend>
+
+                  <div class="row">
+                    <fieldset class="setting_category_single_right_container">
+                      <legend>setting_category_single_right_container</legend>
+                      <fieldset class="category_title">
+                        <legend>category_title</legend>
+                      </fieldset>
+                    </fieldset>
+
+                    <fieldset class="setting_category_single_left_container">
+                      <legend>setting_category_single_left_container</legend>
+                      <fieldset class="single_settings_list">
+                        <legend>single_settings_list</legend>
+                        <fieldset class="setting_single">
+                          <legend>setting_single</legend>
+                        </fieldset>
+                        <fieldset class="setting_single">
+                          <legend>setting_single</legend>
+                        </fieldset>
+                        <fieldset class="setting_single">
+                          <legend>setting_single</legend>
+                        </fieldset>
+                      </fieldset>
+
+                        <fieldset class="add_setting_form">
+                          <legend>add_setting_form</legend>
+                          <fieldset class="form">
+                            <legend>form</legend>
+                          </fieldset>
+                        </fieldset>
+
+                    </fieldset>
+                  </div>
+
+
+            </fieldset>
+
+      </fieldset>
+
+</fieldset>

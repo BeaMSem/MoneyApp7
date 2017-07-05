@@ -1,0 +1,707 @@
+<style>
+
+  .money_app{
+    /*border: 1px solid greenyellow;*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+  }
+  .white_section{
+    background-color: white;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 0 10em;
+    margin: 0;
+  }
+  .light_grey_section{
+    background-color: #ebebeb;
+    padding: 0 10em;
+    margin: 0;
+  }
+
+
+
+
+  /*SETTINGS_SECTION*/
+
+  .settings_section{
+    /*border: 1px solid rgba(163, 50, 255, 0.6);*/
+    /*padding: 5px;*/
+    /*margin: 5px;*/
+  }
+  .settings_category_list{
+    /*border: 1px solid rgba(163, 50, 255, 0.6);*/
+    /*padding: 5px;*/
+    /*margin: 5px;*/
+  }
+  .setting_category_single{
+    border: 1px solid deeppink;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-flow: row;
+  }
+  .settings_category_single_right_container{
+    border: 1px solid deepskyblue;
+    padding: 5px;
+    margin: 5px;
+    flex:3
+  }
+  .settings_category_single_left_container{
+    border: 1px solid deepskyblue;
+    padding: 5px;
+    margin: 5px;
+    flex:1
+  }
+  .category_title{
+    border: 1px solid hotpink;
+    padding: 5px;
+    margin: 5px;
+  }
+  .single_settings_list{
+    border: 1px solid pink;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-flow: column;
+  }
+  .setting_single{
+    border: 1px solid greenyellow;
+    padding: 5px;
+    margin: 5px;
+  }
+  .add_setting_form{
+    border: 2px solid hotpink;
+    /*padding: 5px;*/
+    /*margin: 5px;*/
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    flex:1;
+  }
+
+  .add_setting_form .form {
+    /*border: 2px solid green;*/
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+
+  .add_setting_form .form .form_inputs{
+    /*border: 1px solid greenyellow;*/
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex: 2;
+  }
+  .add_setting_form .form .form_inputs input[type=text]{
+    /*border: 2px solid green;*/
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    border-radius: 2px;
+
+  }
+  .add_setting_form .form .form_buttons{
+    /*border: 1px solid yellowgreen;*/
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    flex: 1;
+  }
+  .add_setting_form .form .form_buttons .cancel input[type=button]{
+    cursor: pointer;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 0.75em;
+    color: royalblue;
+    border-bottom: 1px solid royalblue;
+  }
+  .add_setting_form .form .form_buttons .add input[type=button]{
+    cursor: pointer;
+    border: 0 none;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0.75em;
+    background-color: #2b2f41;
+    color: white;
+    font-size: 0.75em;
+  }
+
+
+  .subcategory_form_button{
+    /*border: 2px solid green;*/
+  }
+  .subcategory_form_button input[type=button]{
+    cursor: pointer;
+    border: 0 none;
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 0.75em;
+    color: royalblue;
+    border-bottom: 1px solid royalblue;
+  }
+
+
+
+
+
+
+  /*NUMBERS*/
+  .budget_unit_table_list{
+
+    /*border: 1px solid deeppink;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+
+    display : flex;
+    flex-flow: row;
+    justify-content: center;
+    padding-top: 6em;
+    padding-bottom: 2em;
+
+    color:white;
+    font-size: 1em;
+    font-weight: 300;
+  }
+  .budget_unit_table_single{
+    /*border: 1px solid greenyellow;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    padding: 25px 20px;
+    border-radius: 2px;
+    margin: 0.5em;
+  }
+  .budget_unit_table_top_container{
+    /*border: 1px solid greenyellow;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+
+    display : flex;
+    flex-flow: column;
+
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  }
+  .budget_unit_table_bottom_container{
+    /*border: 1px solid greenyellow;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+    display : flex;
+    flex-flow: column;
+    padding-top: 0.4em;
+  }
+  .budget_unit_table_top_container .budget_unit{
+    /*border: 1px solid darkorange;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+    display: flex;
+    flex-flow: column;
+  }
+  .budget_unit_table_bottom_container .budget_unit{
+    /*border: 1px solid darkorange;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+    display: flex;
+    flex-flow: row;
+  }
+  .budget_unit_title{
+    /*border: 1px solid greenyellow;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+
+    font-size: 0.95em;
+    opacity: 0.65;
+    padding-right: 1em;
+    font-weight: 400;
+
+  }
+  .budget_unit_amount{
+    /*border: 1px solid greenyellow;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+
+    font-size: 0.95em;
+    font-weight: 400;
+  }
+  .budget_unit_table_top_container .budget_unit .budget_unit_amount{
+    font-size: 2.8em;
+  }
+
+/*APPLICATION_NAVIGATION*/
+  .application_navigation{
+
+    /*border: 1px solid deepskyblue;*/
+    /*padding: 2px;*/
+    /*margin: 2px;*/
+
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+
+  .application_navigation input[type=button]{
+    cursor: pointer;
+    border: 0 none;
+    padding: 4px;
+    margin: 0 2em 0 0.5em;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: 500;
+    color: #373737;
+    border-bottom: 2px solid #373737;
+  }
+
+  .setting_row{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    border: 1px solid deepskyblue;
+    background-color: #fafafa;
+  }
+  .setting_name,
+  .setting_data,
+  .setting_buttons{
+    flex: 1;
+  }
+
+
+
+
+
+
+  /*RECORD  */
+  .list_record{
+    flex: 1;
+    display : flex;
+    flex-flow: column;
+    background: #eaeaea;
+    border: 1px solid green;
+    padding: 50px 10px 20px 10px;
+  }
+  .single_record{
+    border: 1px solid hotpink;
+    padding: 10px;
+
+    flex: 1;
+    display : flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 1px;
+    background: white;
+  }
+  .single_record_data{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    display : flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    flex: 3;
+  }
+  .single_record_buttons{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    display : flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2;
+  }
+  .single_record_name{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    flex: 3;
+    display : flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+
+
+  }
+  .single_record_quantity{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    flex: 1;
+    display : flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .single_record_amount{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    flex: 2;
+    display : flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .single_record_payment_method{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    flex: 2;
+    display : flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .single_record_date{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    flex: 3;
+    display : flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .single_record_shop{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    flex: 2;
+    display : flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  /*FORM*/
+  .records_form{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    flex: 1;
+    display : flex;
+    flex-flow: row;
+  }
+  .payment_method_buttons{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    flex: 1;
+    display : flex;
+    flex-flow: row;
+  }
+
+
+
+
+
+  /*SHOPICONS*/
+  .shop_icon {
+    width: 2em;
+    height: 2em;
+    border-radius: 2px;
+
+    color: white;
+
+    display : flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .list_shop_icon{
+    border: 1px solid orangered;
+    padding: 2px;
+    margin: 2px;
+    display : flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+  }
+  .ms{
+    background-color: #2E2F30;
+  }
+  .sainsbury{
+    background-color: #ff8c00;
+  }
+  .tesco{
+    background-color: #2E41A9;
+  }
+  .waitrose{
+    background-color: #165716;
+  }
+  .other{
+    background-color: #818284;
+  }
+
+
+
+    /*RECORDS section STYLES*/
+
+  .records_section{
+    /*border: 2px solid orangered;*/
+    /*margin: 5px;*/
+    /*padding: 5px;*/
+    margin-top: 2em;
+
+  }
+  .records_section_navigation{
+    /*border: 2px solid blueviolet;*/
+    /*margin: 5px;*/
+    /*padding: 5px;*/
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 1em 0px;
+  }
+  .records_section_navigation_left_container{
+    /*border: 2px solid greenyellow;*/
+    /*margin: 5px;*/
+    /*padding: 5px;*/
+  }
+  .records_section_navigation_left_container input[type=text]{
+    height: 2.5em;
+    width: 22em;
+    line-height: 2.5em;
+    border: 0 none;
+    border-radius: 2px;
+    margin: 0;
+    /*border: 1px solid orange;*/
+  }
+  .records_section_navigation_left_container input[type=text]::placeholder{
+    color: grey;
+    font-size: 1.2em;
+    /*border: 1px solid deepskyblue;*/
+  }
+  .records_section_navigation_right_container{
+    /*border: 2px solid deepskyblue;*/
+    /*margin: 5px;*/
+    /*padding: 5px;*/
+  }
+  .records_section_navigation_right_container input[type=button]{
+    cursor: pointer;
+    border: 0 none;
+    border-radius: 2px;
+    background-color: #2b2f41;
+    padding: 0.7em;
+    margin: 0;
+    margin-left: 0.5em;
+    font-size: 0.7em;
+    font-weight: 400;
+    color:white;
+  }
+  .records_section_forms{
+    /*border: 2px solid blueviolet;*/
+    /*margin: 5px;*/
+    /*padding: 5px;*/
+
+  }
+  .records_section_records{
+    /*border: 2px solid blueviolet;*/
+    /*margin: 5px;*/
+    /*padding: 5px;*/
+    /*background-color: #e7e7e7;*/
+  }
+  .expenses_form{
+    border: 2px solid deeppink;
+    margin: 5px;
+    padding: 5px;
+
+  }
+  .occasional_income_form{
+    border: 2px solid deeppink;
+    margin: 5px;
+    padding: 5px;
+
+  }
+  .transfer_form{
+    border: 2px solid deeppink;
+    margin: 5px;
+    padding: 5px;
+
+  }
+
+  .expense_record{
+    border-left: 2px solid yellowgreen;
+    background-color: white;
+    /*margin: 6px;*/
+    /*padding: 6px;*/
+
+  }
+  .expense_record:hover{
+    border-left: 2px solid yellowgreen;
+    background-color: #fafafa;
+  }
+  .transfer_record{
+    border-left: 2px solid green;
+    background-color: white;
+    /*margin: 6px;*/
+    /*padding: 6px;*/
+
+  }
+  .transfer_record:hover{
+    border-left: 2px solid green;
+    background-color: #F5F5F5;
+  }
+  .occasional_income_record{
+    border-left: 2px solid olivedrab;
+    background-color: white;
+    /*margin: 6px;*/
+    /*padding: 6px;*/
+  }
+  .occasional_income_record:hover{
+    border-left: 2px solid olivedrab;
+    background-color: #F5F5F5;
+  }
+  .record{
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      font-size: 0.85em;
+      margin: 4px 10px;
+      padding: 15px;
+  }
+  .record:hover{
+
+  }
+  .record_data{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    flex:3;
+    align-items: center;
+    /*border: 2px solid olivedrab;*/
+  }
+  .record_buttons{
+    display: flex;
+    flex-flow: row;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    /*border: 2px solid olivedrab;*/
+  }
+  .record_buttons input[type=button]{
+    cursor: pointer;
+    border: 1px solid #d9d9d9;
+    font-size:0.8em;
+    color: #393939;
+    height: 2.5em;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 1px 1px 2px #d9d9d9;
+    margin: 0;
+  }
+
+
+
+
+
+  .record_name,
+  .record_amount{
+      font-weight: 600;
+  }
+  .record_qty,
+  .record_description,
+  .record_shop_name,
+  .record_update_date,
+  .record_payment_method{
+      font-weight: 200;
+    /*font-size: 1em;*/
+  }
+
+  .record_qty,
+  .record_data,
+  .record_amount{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .record_description,
+  .record_shop_name,
+  .record_update_date,
+  .record_payment_method{
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .record_name{
+    flex:4;
+  }
+
+
+
+  .record_update_date{
+       flex:3;
+       /*border: 2px solid deepskyblue;*/
+     }
+  .record_amount{
+    flex:2;
+    /*border: 2px solid orange;*/
+  }
+  .record_qty{
+    flex:1;
+    /*border: 2px solid olivedrab;*/
+  }
+
+  .record_payment_method{
+    flex:5;
+    /*border: 2px solid greenyellow;*/
+  }
+  .record_shop_name{
+    flex:3;
+    /*border: 2px solid greenyellow;*/
+  }
+  .record_description{
+    flex:8;
+    /*border: 2px solid darkgreen;*/
+  }
+
+
+
+  .record_name{
+    /*border: 2px solid deeppink;*/
+  }
+
+
+
+
+  .input_with_pound{
+    /*border: 1px solid deeppink;*/
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    background-color: #a5a5a5;
+    border-radius: 2px;
+    color: white;
+    font-size: 1em;;
+  }
+    .pound{
+      margin: 0.3em;
+    }
+  .add_setting_form .form .form_inputs .input_with_pound input[type=text]{
+      border-radius: 0 2px 2px 0;
+    }
+
+
+
+
+
+</style>
+
+
+
+
+<%= react_component 'Application', {settings: @settings, budget_units: @budget_units, categories: @categories, records: @records, recurring_expenses_categories: @recurring_expenses_categories, recurring_expenses: @recurring_expenses} %>
